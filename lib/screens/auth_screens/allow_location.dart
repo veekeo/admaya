@@ -1,9 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:admaya/components/main_button.dart';
-import 'package:admaya/components/outline_button.dart';
+
 import 'package:admaya/constants.dart';
-import 'package:admaya/screens/auth_screens/phone_number.dart';
 
 import 'package:admaya/utils/helper.dart';
 

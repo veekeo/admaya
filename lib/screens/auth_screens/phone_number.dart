@@ -69,6 +69,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                         ),
                       ),
                       child: TextFormField(
+                        autofocus: true,
                         // onChanged: (value) {
                         //   setState(() {
                         //     email = value;
@@ -79,7 +80,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                           fontSize: 20,
                           decoration: TextDecoration.none,
                         ),
-                        keyboardType: TextInputType.emailAddress,
+                        keyboardType: TextInputType.phone,
                         cursorColor: kPrimaryColor,
                         cursorWidth: 2,
                         decoration: InputDecoration(
