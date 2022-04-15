@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables
 
 import 'package:admaya/components/main_button.dart';
+import 'package:admaya/constants.dart';
 import 'package:admaya/screens/auth_screens/signup.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
@@ -69,6 +70,7 @@ class IntroScreen extends StatelessWidget {
                       return SignUpScreen();
                     }));
                   },
+                  color: kPrimaryColor,
                   text: 'Continue',
                 ),
               ],

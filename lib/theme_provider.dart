@@ -7,6 +7,7 @@ class MyTheme {
     scaffoldBackgroundColor: Color.fromARGB(255, 6, 0, 17),
     brightness: Brightness.dark,
     colorScheme: ColorScheme.dark(),
+    cardColor: Color(0XFF333333),
     textTheme: TextTheme(
       bodyText1: TextStyle(
         color: Colors.white,
@@ -17,6 +18,7 @@ class MyTheme {
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
     brightness: Brightness.light,
+    cardColor: Color(0XFFF6F6F6),
     colorScheme: ColorScheme.light(),
     textTheme: TextTheme(
       bodyText1: TextStyle(

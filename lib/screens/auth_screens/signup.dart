@@ -1,14 +1,17 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:admaya/constants.dart';
+import 'package:admaya/components/outline_button.dart';
+import 'package:admaya/screens/auth_screens/phone_number.dart';
+
 import 'package:admaya/utils/helper.dart';
-import 'package:country_code_picker/country_code_picker.dart';
+
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
@@ -87,33 +90,27 @@ class SignUpScreen extends StatelessWidget {
             addVerticalSpace(15),
             Column(
               children: [
-                CountryCodePicker(
-                  initialSelection: 'NG',
-                  showCountryOnly: false,
-                  textStyle: TextStyle(
-                    decoration: TextDecoration.none,
-                    color: Theme.of(context).textTheme.bodyText1?.color,
-                    fontFamily: 'Medium',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w100,
-                  ),
-                  flagWidth: 30,
-                  searchDecoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        color: kPrimaryColor,
-                        width: 2.0,
-                      ),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    hintText: 'Search country',
-                    hintStyle: TextStyle(
-                      fontFamily: 'Light',
-                    ),
-                  ),
+                addVerticalSpace(10),
+                OulineButtonContainer(
+                  image: 'assets/images/google.png',
+                  text: 'Continue with Google',
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return PhoneNumberScreen();
+                    }));
+                  },
+                ),
+                addVerticalSpace(10),
+                OulineButtonContainer(
+                  image: 'assets/images/envelope.png',
+                  text: 'Continue with Email',
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return PhoneNumberScreen();
+                    }));
+                  },
                 ),
               ],
             ),
