@@ -1,7 +1,9 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables
 
 import 'package:admaya/intro_screen.dart';
-import 'package:admaya/theme_provider.dart';
+import 'package:admaya/theme/theme.dart';
+
+// import 'package:admaya/theme_provider.dart';
 import 'package:country_code_picker/country_localizations.dart';
 
 import 'package:flutter/material.dart';
@@ -9,6 +11,8 @@ import 'package:flutter/material.dart';
 void main() async {
   runApp(MyApp());
 }
+
+AppTheme _appTheme = AppTheme();
 
 class MyApp extends StatelessWidget {
   @override
@@ -22,9 +26,8 @@ class MyApp extends StatelessWidget {
       ],
       debugShowCheckedModeBanner: false,
       title: 'Admaya',
-      themeMode: ThemeMode.system,
-      theme: MyTheme.lightTheme,
-      darkTheme: MyTheme.darkTheme,
+      theme: _appTheme.light,
+      darkTheme: _appTheme.dark,
       home: IntroScreen(),
     );
   }

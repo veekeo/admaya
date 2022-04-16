@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors_in_immutables, prefer_const_constructors
 
+import 'package:admaya/theme/theme.dart';
 import 'package:admaya/utils/helper.dart';
 
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class OulineButtonContainer extends StatelessWidget {
         decoration: BoxDecoration(
             border: Border.all(
               width: 1,
-              color: Colors.black,
+              color: AppTheme().dark.primaryColorLight,
             ),
             borderRadius: BorderRadius.all(Radius.circular(50))),
         child: Row(
