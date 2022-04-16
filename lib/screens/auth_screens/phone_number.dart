@@ -40,7 +40,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                       width: 300 / 3,
                       height: 60,
                       decoration: BoxDecoration(
-                        color: Color(0XFFF6F6F6),
+                        color: Theme.of(context).cardTheme.color,
                         borderRadius: BorderRadius.only(
                           topRight: Radius.zero,
                           bottomRight: Radius.zero,
@@ -60,7 +60,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                       width: 210,
                       height: 60,
                       decoration: BoxDecoration(
-                        color: Color(0XFFF6F6F6),
+                        color: Theme.of(context).cardTheme.color,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.zero,
                           bottomLeft: Radius.zero,
@@ -121,6 +121,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                   },
                   text: 'Continue',
                   color: kPrimaryColor,
+                  textColor: Colors.white,
                 ),
               ],
             )

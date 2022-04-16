@@ -45,7 +45,6 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
@@ -66,13 +65,14 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                           child: Icon(
                             Icons.arrow_back_ios,
                             size: 20,
+                            color: Theme.of(context).colorScheme.outline,
                           ),
                         ),
                         addVerticalSpace(35),
                         Text(
                           'Continue with Email.',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).textTheme.bodyText1?.color,
                             fontFamily: 'Medium',
                             fontSize: 20,
                           ),
@@ -81,7 +81,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                         Text(
                           'Email address',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).textTheme.bodyText1?.color,
                             fontFamily: 'Medium',
                             fontSize: 15,
                           ),
@@ -106,6 +106,10 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                                 horizontal: 10, vertical: 20),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide(
+                                width: 2.0,
+                                color: Theme.of(context).colorScheme.outline,
+                              ),
                             ),
                             prefixIcon: Padding(
                               padding:
@@ -113,7 +117,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                               child: Icon(
                                 Icons.email_outlined,
                                 size: 25,
-                                color: Colors.black,
+                                color: Theme.of(context).colorScheme.outline,
                               ),
                             ),
                             hintText: 'Email address',
@@ -129,8 +133,9 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                             //       BorderSide(color: kPrimaryColor, width: 1),
                             // ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 width: 2.0,
+                                color: Theme.of(context).colorScheme.outline,
                               ),
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -141,7 +146,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                         Text(
                           'Password',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).colorScheme.outline,
                             fontFamily: 'Medium',
                             fontSize: 15,
                           ),
@@ -173,7 +178,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                               child: Icon(
                                 Icons.lock,
                                 size: 25,
-                                color: Colors.black,
+                                color: Theme.of(context).colorScheme.outline,
                               ),
                             ),
                             hintText: 'Password',
@@ -189,8 +194,9 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                             //       BorderSide(color: kPrimaryColor, width: 1),
                             // ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 width: 2.0,
+                                color: Theme.of(context).colorScheme.outline,
                               ),
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -232,6 +238,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                     },
                     text: 'Sign up',
                     color: kPrimaryColor,
+                    textColor: Colors.white,
                   ),
                   addVerticalSpace(10),
                   MainButton(
@@ -254,7 +261,8 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                       // }
                     },
                     text: 'Sign in',
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.outline,
+                    textColor: Theme.of(context).scaffoldBackgroundColor,
                   ),
                 ],
               ),

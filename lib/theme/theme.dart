@@ -80,7 +80,7 @@ class AppTheme {
           ),
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
-        scaffoldBackgroundColor: _DarkColors.background,
+
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(primary: AppColors.secondary),
         ),

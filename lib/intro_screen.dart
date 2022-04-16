@@ -86,6 +86,7 @@ class IntroScreen extends StatelessWidget {
                   },
                   color: kPrimaryColor,
                   text: 'Continue',
+                  textColor: Colors.white,
                 ),
               ],
             ),

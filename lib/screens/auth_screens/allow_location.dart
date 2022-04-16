@@ -51,9 +51,11 @@ class AllowLocationScreen extends StatelessWidget {
               children: [
                 addVerticalSpace(10),
                 MainButton(
-                    onPressed: () {},
-                    text: 'Allow location data',
-                    color: Colors.black),
+                  onPressed: () {},
+                  text: 'Allow location data',
+                  color: Theme.of(context).colorScheme.onSecondary,
+                  textColor: Colors.white,
+                ),
                 addVerticalSpace(20),
                 Text(
                   'Not now',
