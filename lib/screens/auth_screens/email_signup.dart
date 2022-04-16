@@ -4,7 +4,6 @@ import 'package:admaya/components/main_button.dart';
 import 'package:admaya/constants.dart';
 import 'package:admaya/screens/auth_screens/phone_number.dart';
 import 'package:admaya/utils/helper.dart';
-
 import 'package:flutter/material.dart';
 
 class EmailSignUpScreen extends StatefulWidget {
@@ -66,16 +65,25 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                           },
                           child: Icon(
                             Icons.arrow_back_ios,
-                            size: 30,
+                            size: 20,
                           ),
                         ),
-                        addVerticalSpace(10),
+                        addVerticalSpace(35),
                         Text(
-                          'Continue with Email',
+                          'Continue with Email.',
                           style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'Medium',
-                            fontSize: 25,
+                            fontSize: 20,
+                          ),
+                        ),
+                        addVerticalSpace(40),
+                        Text(
+                          'Email address',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Medium',
+                            fontSize: 15,
                           ),
                         ),
                         addVerticalSpace(10),
@@ -108,7 +116,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                                 color: Colors.black,
                               ),
                             ),
-                            hintText: 'Enter your email',
+                            hintText: 'Email address',
                             hintStyle: TextStyle(
                               fontFamily: 'Regular',
                               fontSize: 16,
@@ -129,6 +137,15 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                           ),
                           validator: (value) => validateEmail(value),
                         ),
+                        addVerticalSpace(15),
+                        Text(
+                          'Password',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Medium',
+                            fontSize: 15,
+                          ),
+                        ),
                         addVerticalSpace(10),
                         TextFormField(
                           onChanged: (value) {
@@ -147,6 +164,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                             contentPadding: EdgeInsets.symmetric(
                                 horizontal: 10, vertical: 20),
                             border: OutlineInputBorder(
+                              borderSide: BorderSide(width: 3),
                               borderRadius: BorderRadius.circular(30),
                             ),
                             prefixIcon: Padding(
@@ -158,7 +176,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                                 color: Colors.black,
                               ),
                             ),
-                            hintText: 'Enter your password',
+                            hintText: 'Password',
                             hintStyle: TextStyle(
                               fontFamily: 'Regular',
                               fontSize: 16,
@@ -191,26 +209,54 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
                   ),
                 ],
               ),
-              MainButton(
-                onPressed: () {
-                  // final isValidForm = _formKey.currentState!.validate();
-                  // if (isValidForm) {
-                  //   try {
-                  //     final newUser =
-                  //         await _auth.createUserWithEmailAndPassword(
-                  //             email: email, password: password);
-                  //     if (newUser != null) {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return PhoneNumberScreen();
-                  }));
-                  //     }
-                  //   } catch (e) {
-                  //     print(e);
-                  //   }
-                  // }
-                },
-                text: 'Sign Up',
-                color: kPrimaryColor,
+              Column(
+                children: [
+                  MainButton(
+                    onPressed: () {
+                      // final isValidForm = _formKey.currentState!.validate();
+                      // if (isValidForm) {
+                      //   try {
+                      //     final newUser =
+                      //         await _auth.createUserWithEmailAndPassword(
+                      //             email: email, password: password);
+                      //     if (newUser != null) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return PhoneNumberScreen();
+                      }));
+                      //     }
+                      //   } catch (e) {
+                      //     print(e);
+                      //   }
+                      // }
+                    },
+                    text: 'Sign up',
+                    color: kPrimaryColor,
+                  ),
+                  addVerticalSpace(10),
+                  MainButton(
+                    onPressed: () {
+                      // final isValidForm = _formKey.currentState!.validate();
+                      // if (isValidForm) {
+                      //   try {
+                      //     final newUser =
+                      //         await _auth.createUserWithEmailAndPassword(
+                      //             email: email, password: password);
+                      //     if (newUser != null) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return PhoneNumberScreen();
+                      }));
+                      //     }
+                      //   } catch (e) {
+                      //     print(e);
+                      //   }
+                      // }
+                    },
+                    text: 'Sign in',
+                    color: Colors.black,
+                  ),
+                ],
               ),
             ],
           ),

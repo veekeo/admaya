@@ -5,8 +5,10 @@ import 'package:admaya/constants.dart';
 import 'package:admaya/screens/auth_screens/signup.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:delayed_display/delayed_display.dart';
 
 class IntroScreen extends StatelessWidget {
+  final Duration initialDelay = Duration(milliseconds: 300);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,37 +31,49 @@ class IntroScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  'assets/images/logo_white.png',
-                  width: 60,
-                  height: 60,
+                DelayedDisplay(
+                  delay: initialDelay,
+                  child: Image.asset(
+                    'assets/images/logo_white.png',
+                    width: 60,
+                    height: 60,
+                  ),
                 ),
                 addVerticalSpace(10),
-                Text(
-                  'Find Beauticians',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Bold',
-                    fontSize: 35,
+                DelayedDisplay(
+                  delay: Duration(milliseconds: 500),
+                  child: Text(
+                    'Find Beauticians',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Bold',
+                      fontSize: 35,
+                    ),
                   ),
                 ),
                 addVerticalSpace(5),
-                Text(
-                  'near you, book appointments, or',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Light',
-                    fontSize: 17,
+                DelayedDisplay(
+                  delay: Duration(milliseconds: 600),
+                  child: Text(
+                    'near you, book appointments, or',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Light',
+                      fontSize: 17,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
                 addVerticalSpace(5),
-                Text(
-                  'Work Jobs',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'Bold',
-                    fontSize: 35,
+                DelayedDisplay(
+                  delay: Duration(milliseconds: 700),
+                  child: Text(
+                    'Work Jobs',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Bold',
+                      fontSize: 35,
+                    ),
                   ),
                 ),
                 addVerticalSpace(30),
