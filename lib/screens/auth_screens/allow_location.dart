@@ -2,6 +2,7 @@
 
 import 'package:admaya/components/main_button.dart';
 import 'package:admaya/constants.dart';
+import 'package:admaya/screens/main/bottom_navbar.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
 import 'package:delayed_display/delayed_display.dart';
@@ -39,7 +40,7 @@ class AllowLocationScreen extends StatelessWidget {
                       decoration: TextDecoration.none,
                       color: Theme.of(context).textTheme.bodyText1?.color,
                       fontFamily: 'Bold',
-                      fontSize: 32,
+                      fontSize: 28,
                     ),
                   ),
                 ),
@@ -51,19 +52,32 @@ class AllowLocationScreen extends StatelessWidget {
               children: [
                 addVerticalSpace(10),
                 MainButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return BottomNavBar();
+                    }));
+                  },
                   text: 'Allow location data',
                   color: Theme.of(context).colorScheme.onSecondary,
                   textColor: Colors.white,
                 ),
                 addVerticalSpace(20),
-                Text(
-                  'Not now',
-                  style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    color: kPrimaryColor,
-                    fontFamily: 'Medium',
-                    fontSize: 20,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return BottomNavBar();
+                    }));
+                  },
+                  child: Text(
+                    'Not now',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: kPrimaryColor,
+                      fontFamily: 'Medium',
+                      fontSize: 17,
+                    ),
                   ),
                 ),
               ],

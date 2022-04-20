@@ -76,7 +76,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                         //   });
                         // },
                         style: TextStyle(
-                          fontFamily: 'Light',
+                          fontFamily: 'Medium',
                           fontSize: 20,
                           decoration: TextDecoration.none,
                         ),
@@ -87,7 +87,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                           border: InputBorder.none,
                           hintText: 'Phone Number',
                           hintStyle: TextStyle(
-                            fontFamily: 'Light',
+                            fontFamily: 'Medium',
                             fontSize: 20,
                           ),
 
