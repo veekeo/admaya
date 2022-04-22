@@ -20,6 +20,9 @@ class MyTheme {
         color: Colors.white,
       ),
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: Color.fromARGB(255, 42, 42, 42),
+    ),
   );
 
   static final lightTheme = ThemeData(
@@ -37,6 +40,9 @@ class MyTheme {
       bodyText1: TextStyle(
         color: Colors.black,
       ),
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: Color(0XFFF6F6F6),
     ),
   );
 }

@@ -12,30 +12,37 @@ class CurrentLocationContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
-      height: 50,
+      width: 130,
+      height: 30,
       decoration: BoxDecoration(
         color: Theme.of(context).cardTheme.color,
         borderRadius: BorderRadius.circular(30),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            LineIcons.mapMarker,
-          ),
-          Text(
-            'Oshodi',
-            style: TextStyle(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              LineIcons.mapMarker,
+              size: 15,
               color: Theme.of(context).textTheme.bodyText1!.color,
-              fontFamily: 'Medium',
             ),
-          ),
-          addHorizontalSpace(5),
-          Icon(
-            LineIcons.angleDown,
-          ),
-        ],
+            Text(
+              'Oshodi',
+              style: TextStyle(
+                color: Theme.of(context).textTheme.bodyText1!.color,
+                fontFamily: 'Medium',
+              ),
+            ),
+            addHorizontalSpace(5),
+            Icon(
+              LineIcons.angleDown,
+              size: 12,
+              color: Theme.of(context).textTheme.bodyText1!.color,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -18,6 +18,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 0;
+  late bool pageValue;
 
   final List<Widget> _pageList = [
     HomeScreen(),
@@ -32,48 +33,48 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: _pageList[pageIndex],
       bottomNavigationBar: BottomNavigationBar(
-        iconSize: 32,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         selectedIconTheme: IconThemeData(
           color: kPrimaryColor,
         ),
         backgroundColor: Theme.of(context).cardTheme.color,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
         currentIndex: pageIndex,
-        onTap: (value) {
+        onTap: (int value) {
           setState(() {
             pageIndex = value;
+            // if(pageIndex == value){
+            //   pageValue = true;
+            // }
           });
         },
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              LineIcons.home,
-            ),
-            label: 'home',
+            icon: Icon(LineIcons.home),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               LineIcons.search,
             ),
-            label: 'search',
+            label: 'Discover',
           ),
           BottomNavigationBarItem(
-            icon: Icon(LineIcons.inbox),
-            label: 'chat',
+            icon: Icon(LineIcons.envelope),
+            label: 'Chats',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               LineIcons.calendar,
             ),
-            label: "Appointment",
+            label: "Appointments",
           ),
           BottomNavigationBarItem(
             icon: Icon(
               LineIcons.userAlt,
             ),
-            label: 'person',
+            label: 'Profile',
           ),
         ],
       ),

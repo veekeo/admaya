@@ -3,42 +3,47 @@ class Category {
   final String icon;
   final int id;
 
-  Category({
-    required this.icon,
-    required this.title,
-    required this.id,
-  });
+  Category(
+    this.icon,
+    this.title,
+    this.id,
+  );
 }
 
 List<Category> categories = [
   Category(
-    icon: 'assets/svg/makeUp.svg',
-    title: 'Make up',
-    id: 1,
+    '',
+    'All',
+    0,
   ),
   Category(
-    icon: 'assets/svg/eyeLashes.svg',
-    title: 'Eye-Lashes',
-    id: 2,
+    'assets/svg/makeUp.svg',
+    'Make up',
+    1,
   ),
   Category(
-    icon: 'assets/svg/hairStyling.svg',
-    title: 'Hair styling',
-    id: 3,
+    'assets/svg/eyeLashes.svg',
+    'Eyebrows & lashes',
+    2,
   ),
   Category(
-    icon: 'assets/svg/nailArt.svg',
-    title: 'Nail art',
-    id: 4,
+    'assets/svg/hairStyling.svg',
+    'Hair styling',
+    3,
   ),
   Category(
-    icon: 'assets/svg/cosmetics.svg',
-    title: 'Cosmetics',
-    id: 5,
+    'assets/svg/nailArt.svg',
+    'Nail art',
+    4,
   ),
   Category(
-    icon: 'assets/svg/skinCare.svg',
-    title: 'Skin care',
-    id: 6,
+    'assets/svg/cosmetics.svg',
+    'Cosmetics',
+    5,
+  ),
+  Category(
+    'assets/svg/skinCare.svg',
+    'Skin care',
+    6,
   ),
 ];
