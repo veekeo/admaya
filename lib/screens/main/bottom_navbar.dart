@@ -1,12 +1,11 @@
 // ignore_for_file: prefer_const_constructors, unused_field, prefer_const_literals_to_create_immutables
 
-import 'package:admaya/constants.dart';
 import 'package:admaya/screens/main/appointment_screen.dart';
 import 'package:admaya/screens/main/chat_screen.dart';
 import 'package:admaya/screens/main/discover_screen.dart';
 import 'package:admaya/screens/main/home_screen.dart';
 import 'package:admaya/screens/main/profile_screen.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -18,7 +17,6 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int pageIndex = 0;
-  late bool pageValue;
 
   final List<Widget> _pageList = [
     HomeScreen(),
@@ -33,47 +31,39 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: _pageList[pageIndex],
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 20,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         selectedIconTheme: IconThemeData(
-          color: kPrimaryColor,
+          color: Theme.of(context).colorScheme.outline,
         ),
         backgroundColor: Theme.of(context).cardTheme.color,
         currentIndex: pageIndex,
         onTap: (int value) {
           setState(() {
             pageIndex = value;
-            // if(pageIndex == value){
-            //   pageValue = true;
-            // }
           });
         },
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(LineIcons.home),
+            icon: FaIcon(FontAwesomeIcons.solidHeart),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              LineIcons.search,
-            ),
+            icon: FaIcon(FontAwesomeIcons.magnifyingGlass),
             label: 'Discover',
           ),
           BottomNavigationBarItem(
-            icon: Icon(LineIcons.envelope),
+            icon: FaIcon(FontAwesomeIcons.solidMessage),
             label: 'Chats',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              LineIcons.calendar,
-            ),
+            icon: FaIcon(FontAwesomeIcons.calendar),
             label: "Appointments",
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              LineIcons.userAlt,
-            ),
+            icon: FaIcon(FontAwesomeIcons.user),
             label: 'Profile',
           ),
         ],

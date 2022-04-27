@@ -12,7 +12,7 @@ class Category {
 
 List<Category> categories = [
   Category(
-    '',
+    'assets/svg/makeUp.svg',
     'All',
     0,
   ),

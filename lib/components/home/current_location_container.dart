@@ -2,7 +2,7 @@
 
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CurrentLocationContainer extends StatelessWidget {
   const CurrentLocationContainer({
@@ -23,8 +23,8 @@ class CurrentLocationContainer extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              LineIcons.mapMarker,
+            FaIcon(
+              FontAwesomeIcons.locationArrow,
               size: 15,
               color: Theme.of(context).textTheme.bodyText1!.color,
             ),
@@ -36,8 +36,8 @@ class CurrentLocationContainer extends StatelessWidget {
               ),
             ),
             addHorizontalSpace(5),
-            Icon(
-              LineIcons.angleDown,
+            FaIcon(
+              FontAwesomeIcons.angleDown,
               size: 12,
               color: Theme.of(context).textTheme.bodyText1!.color,
             ),

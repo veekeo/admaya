@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class MyTheme {
   static final darkTheme = ThemeData(
-    scaffoldBackgroundColor: Color.fromARGB(255, 24, 24, 24),
+    scaffoldBackgroundColor: Color.fromARGB(255, 29, 29, 29),
     brightness: Brightness.dark,
     colorScheme: ColorScheme.dark(
       onSecondary: kPrimaryColor,
@@ -13,7 +13,7 @@ class MyTheme {
       outline: Colors.white,
     ),
     cardTheme: CardTheme(
-      color: Color.fromARGB(255, 42, 42, 42),
+      color: Color.fromARGB(255, 41, 41, 41),
     ),
     textTheme: TextTheme(
       bodyText1: TextStyle(
@@ -34,15 +34,16 @@ class MyTheme {
     colorScheme: ColorScheme.light(
       onSecondary: Colors.black,
       secondary: Colors.black,
-      outline: Colors.black,
+      outline: Color.fromARGB(255, 29, 29, 29),
     ),
     textTheme: TextTheme(
       bodyText1: TextStyle(
-        color: Colors.black,
+        color: Color(0XFF00011F),
       ),
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Color(0XFFF6F6F6),
     ),
+    shadowColor: Color.fromARGB(255, 242, 241, 241).withOpacity(1),
   );
 }

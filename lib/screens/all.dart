@@ -55,7 +55,7 @@ class _AllServicesState extends State<AllServices> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 17.0, left: 14),
+          padding: const EdgeInsets.only(bottom: 10.0, left: 14),
           child: Text(
             'Results(1500)',
             style: TextStyle(
@@ -67,7 +67,6 @@ class _AllServicesState extends State<AllServices> {
           ),
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height,
           child: ListView.builder(
             scrollDirection: Axis.vertical,
             shrinkWrap: true,

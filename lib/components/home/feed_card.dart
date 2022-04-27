@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables, avoid_print
 
 import 'package:admaya/constants.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FeedCard extends StatelessWidget {
   final String coverImage;
@@ -24,103 +25,66 @@ class FeedCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(right: 10, left: 15),
-      width: MediaQuery.of(context).size.width / 1.5,
-      height: 250,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(17),
-        // color: Theme.of(context).cardTheme.color,
-        image: DecorationImage(
-          alignment: Alignment.topCenter,
-          image: AssetImage(coverImage),
-        ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(
-          bottom: 40.0,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              name,
-              style: TextStyle(
-                decoration: TextDecoration.none,
-                color: kPrimaryColor,
-                fontFamily: 'Medium',
-                fontSize: 18,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width / 1.5,
+            height: 150,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(17),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                alignment: Alignment.topCenter,
+                image: AssetImage(coverImage),
               ),
-              textAlign: TextAlign.center,
             ),
-            addVerticalSpace(10),
-            Text(
-              address,
-              style: TextStyle(
-                decoration: TextDecoration.none,
-                color: Theme.of(context).textTheme.bodyText1?.color,
-                fontFamily: 'Regular',
-                fontSize: 13,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              addVerticalSpace(10),
+              Text(
+                name,
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  color: Theme.of(context).textTheme.bodyText1?.color,
+                  fontFamily: 'Bold',
+                  fontSize: 18,
+                ),
               ),
-              textAlign: TextAlign.center,
-            ),
-            addVerticalSpace(10),
-            Row(
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      LineIcons.tag,
-                      color: Colors.grey,
-                      size: 15,
-                    ),
-                    Text(
-                      price,
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        color: Colors.grey,
-                        fontFamily: 'Regular',
-                        fontSize: 12,
-                      ),
-                    ),
-                    addHorizontalSpace(10),
-                    Icon(
-                      LineIcons.userClock,
-                      color: Colors.grey,
-                      size: 15,
-                    ),
-                    addHorizontalSpace(5),
-                    Text(
-                      time,
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        color: Colors.grey,
-                        fontFamily: 'Regular',
-                        fontSize: 12,
-                      ),
-                    ),
-                    addHorizontalSpace(10),
-                    Icon(
-                      LineIcons.star,
-                      color: Colors.grey,
-                      size: 15,
-                    ),
-                    Text(
-                      reviews,
-                      style: TextStyle(
-                        decoration: TextDecoration.none,
-                        color: Colors.grey,
-                        fontFamily: 'Regular',
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            )
-          ],
-        ),
+              addVerticalSpace(5),
+              Text(
+                address,
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  color: Colors.grey,
+                  fontFamily: 'Regular',
+                  fontSize: 13,
+                ),
+              ),
+              addVerticalSpace(10),
+              RatingBar.builder(
+                initialRating: 3,
+                itemSize: 13,
+                minRating: 1,
+                direction: Axis.horizontal,
+                allowHalfRating: true,
+                itemCount: 5,
+                itemPadding: EdgeInsets.symmetric(horizontal: 3.0),
+                itemBuilder: (context, _) => FaIcon(
+                  FontAwesomeIcons.solidHeart,
+                  color: kPrimaryColor,
+                ),
+                onRatingUpdate: (rating) {
+                  print(rating);
+                },
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

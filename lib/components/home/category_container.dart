@@ -1,54 +1,321 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
+import 'package:admaya/constants.dart';
+import 'package:admaya/screens/main/discover_screen.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CategoryContainer extends StatelessWidget {
-  final String title;
-  final String icon;
-  final Function()? onTap;
-
-  const CategoryContainer({
-    required this.title,
-    required this.icon,
-    required this.onTap,
-  });
-
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Column(
-        children: [
-          Container(
-            width: 73,
-            height: 73,
-            decoration: BoxDecoration(
-              color: Theme.of(context).cardTheme.color,
-              shape: BoxShape.circle,
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: SvgPicture.asset(
-                icon,
-                color: Theme.of(context).textTheme.bodyText1?.color,
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return DiscoverScreen();
+                  }));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 41, 41, 41),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Image.asset('assets/icons/search.png'),
+                  ),
+                ),
               ),
-            ),
+              addVerticalSpace(10),
+            ],
           ),
-          addVerticalSpace(8),
-          Text(
-            title,
-            style: TextStyle(
-              decoration: TextDecoration.none,
-              color: Theme.of(context).textTheme.bodyText1?.color,
-              fontFamily: 'Regular',
-              fontSize: 14,
-            ),
-            textAlign: TextAlign.center,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: kPrimaryColor,
+                    width: 1.5,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 30, 30, 49),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/icons/makeUp.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              addVerticalSpace(5),
+              Text(
+                'Make up',
+                style: TextStyle(
+                  fontFamily: 'Regular',
+                  fontSize: 14,
+                  color: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.color!
+                      .withOpacity(0.5),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: kPrimaryColor,
+                    width: 1.5,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 30, 30, 49),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/icons/nailArt.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              addVerticalSpace(5),
+              Text(
+                'Nail art',
+                style: TextStyle(
+                  fontFamily: 'Regular',
+                  fontSize: 14,
+                  color: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.color!
+                      .withOpacity(0.5),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: kPrimaryColor,
+                    width: 1.5,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 30, 30, 49),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/icons/eyeLashes.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              addVerticalSpace(5),
+              Text(
+                'Eyebrows',
+                style: TextStyle(
+                  fontFamily: 'Regular',
+                  fontSize: 14,
+                  color: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.color!
+                      .withOpacity(0.5),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: kPrimaryColor,
+                    width: 1.5,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 30, 30, 49),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/icons/cosmetics.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              addVerticalSpace(5),
+              Text(
+                'cosmetics',
+                style: TextStyle(
+                  fontFamily: 'Regular',
+                  fontSize: 14,
+                  color: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.color!
+                      .withOpacity(0.5),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: kPrimaryColor,
+                    width: 1.5,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 30, 30, 49),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/icons/hairStyling.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              addVerticalSpace(5),
+              Text(
+                'Hair styling',
+                style: TextStyle(
+                  fontFamily: 'Regular',
+                  fontSize: 14,
+                  color: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.color!
+                      .withOpacity(0.5),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: kPrimaryColor,
+                    width: 1.5,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 30, 30, 49),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/icons/skinCare.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              addVerticalSpace(5),
+              Text(
+                'Skin care',
+                style: TextStyle(
+                  fontFamily: 'Regular',
+                  fontSize: 14,
+                  color: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.color!
+                      .withOpacity(0.5),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

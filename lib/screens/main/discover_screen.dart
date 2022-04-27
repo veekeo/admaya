@@ -1,11 +1,11 @@
-// ignore_for_file: prefer_const_constructors, unused_field, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, unused_field, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:admaya/constants.dart';
 import 'package:admaya/models/category.dart';
 import 'package:admaya/screens/all.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DiscoverScreen extends StatefulWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
@@ -51,8 +51,10 @@ class _DiscoverScreenState extends State<DiscoverScreen>
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(
-                        LineIcons.search,
+                      FaIcon(
+                        FontAwesomeIcons.magnifyingGlass,
+                        size: 15,
+                        color: Colors.grey,
                       ),
                       addHorizontalSpace(20),
                       Text(
@@ -80,7 +82,7 @@ class _DiscoverScreenState extends State<DiscoverScreen>
                   isScrollable: true,
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: kPrimaryColor,
-                  indicatorWeight: 5,
+                  indicatorWeight: 3,
                   tabs: [
                     Tab(text: categories[0].title),
                     Tab(text: categories[1].title),
@@ -103,12 +105,12 @@ class _DiscoverScreenState extends State<DiscoverScreen>
                 controller: _tabController,
                 children: [
                   Center(child: AllServices()),
-                  Center(child: Text('There')),
-                  Center(child: Text('Hello')),
-                  Center(child: Text('Hello')),
-                  Center(child: Text('Hello')),
-                  Center(child: Text('Hello')),
-                  Center(child: Text('Hello')),
+                  Center(child: Text('Make up')),
+                  Center(child: Text('Eyebrows & lashes')),
+                  Center(child: Text('Hair styling')),
+                  Center(child: Text('Nail art')),
+                  Center(child: Text('Cosmetics')),
+                  Center(child: Text('Skincare')),
                 ],
               ),
             )

@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables, avoid_print
 
 import 'package:admaya/constants.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DiscoverCard extends StatelessWidget {
   final String coverImage;
@@ -26,6 +27,7 @@ class DiscoverCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        addVerticalSpace(20),
         Padding(
           padding: const EdgeInsets.only(bottom: 20),
           child: Container(
@@ -75,7 +77,8 @@ class DiscoverCard extends StatelessWidget {
                             name,
                             style: TextStyle(
                               decoration: TextDecoration.none,
-                              color: kPrimaryColor,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1?.color,
                               fontFamily: 'Medium',
                               fontSize: 20,
                             ),
@@ -86,77 +89,59 @@ class DiscoverCard extends StatelessWidget {
                             address,
                             style: TextStyle(
                               decoration: TextDecoration.none,
-                              color:
-                                  Theme.of(context).textTheme.bodyText1?.color,
+                              color: Colors.grey,
                               fontFamily: 'Regular',
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                             textAlign: TextAlign.center,
                           ),
                           addVerticalSpace(5),
-                          Row(
-                            children: [
-                              Row(
-                                children: [
-                                  Icon(
-                                    LineIcons.tag,
-                                    color: Colors.grey,
-                                    size: 15,
-                                  ),
-                                  Text(
-                                    price,
-                                    style: TextStyle(
-                                      decoration: TextDecoration.none,
-                                      color: Colors.grey,
-                                      fontFamily: 'Regular',
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                  addHorizontalSpace(10),
-                                  Icon(
-                                    LineIcons.userClock,
-                                    color: Colors.grey,
-                                    size: 15,
-                                  ),
-                                  addHorizontalSpace(5),
-                                  Text(
-                                    time,
-                                    style: TextStyle(
-                                      decoration: TextDecoration.none,
-                                      color: Colors.grey,
-                                      fontFamily: 'Regular',
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                  addHorizontalSpace(10),
-                                  Icon(
-                                    LineIcons.star,
-                                    color: Colors.grey,
-                                    size: 15,
-                                  ),
-                                  Text(
-                                    reviews,
-                                    style: TextStyle(
-                                      decoration: TextDecoration.none,
-                                      color: Colors.grey,
-                                      fontFamily: 'Regular',
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          )
+                          RatingBar.builder(
+                            initialRating: 3,
+                            itemSize: 12,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemPadding: EdgeInsets.symmetric(horizontal: 3.0),
+                            itemBuilder: (context, _) => FaIcon(
+                              FontAwesomeIcons.solidHeart,
+                              color: kPrimaryColor,
+                            ),
+                            onRatingUpdate: (rating) {
+                              print(rating);
+                            },
+                          ),
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 25),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            LineIcons.heart,
-                            size: 30,
-                          ),
+                        padding: const EdgeInsets.only(right: 8.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              '5.0',
+                              style: TextStyle(
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1
+                                    ?.color!
+                                    .withOpacity(0.5),
+                                fontFamily: 'Bold',
+                                fontSize: 25,
+                              ),
+                            ),
+                            Text(
+                              'Reviews',
+                              style: TextStyle(
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1
+                                    ?.color,
+                                fontFamily: 'Regular',
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -168,9 +153,7 @@ class DiscoverCard extends StatelessWidget {
         ),
         Divider(
           height: 1,
-          thickness: 1.5,
         ),
-        addVerticalSpace(20),
       ],
     );
   }
