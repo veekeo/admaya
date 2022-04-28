@@ -17,9 +17,10 @@ class CategoryContainer extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return DiscoverScreen();
-                  }));
+                  showSearch(
+                    context: context,
+                    delegate: ServiceSearch(),
+                  );
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -54,10 +55,10 @@ class CategoryContainer extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(6.0),
                   child: Container(
-                    height: 60,
-                    width: 60,
+                    height: 70,
+                    width: 70,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 30, 30, 49),
                       shape: BoxShape.circle,
@@ -73,7 +74,7 @@ class CategoryContainer extends StatelessWidget {
               Text(
                 'Make up',
                 style: TextStyle(
-                  fontFamily: 'Regular',
+                  fontFamily: 'Light',
                   fontSize: 14,
                   color: Theme.of(context)
                       .textTheme
@@ -100,7 +101,7 @@ class CategoryContainer extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(6.0),
                   child: Container(
                     height: 60,
                     width: 60,
@@ -119,7 +120,7 @@ class CategoryContainer extends StatelessWidget {
               Text(
                 'Nail art',
                 style: TextStyle(
-                  fontFamily: 'Regular',
+                  fontFamily: 'Light',
                   fontSize: 14,
                   color: Theme.of(context)
                       .textTheme
@@ -146,7 +147,7 @@ class CategoryContainer extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(6.0),
                   child: Container(
                     height: 60,
                     width: 60,
@@ -165,7 +166,7 @@ class CategoryContainer extends StatelessWidget {
               Text(
                 'Eyebrows',
                 style: TextStyle(
-                  fontFamily: 'Regular',
+                  fontFamily: 'Light',
                   fontSize: 14,
                   color: Theme.of(context)
                       .textTheme
@@ -192,7 +193,7 @@ class CategoryContainer extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(6.0),
                   child: Container(
                     height: 60,
                     width: 60,
@@ -211,7 +212,7 @@ class CategoryContainer extends StatelessWidget {
               Text(
                 'cosmetics',
                 style: TextStyle(
-                  fontFamily: 'Regular',
+                  fontFamily: 'Light',
                   fontSize: 14,
                   color: Theme.of(context)
                       .textTheme
@@ -238,7 +239,7 @@ class CategoryContainer extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(6.0),
                   child: Container(
                     height: 60,
                     width: 60,
@@ -257,7 +258,7 @@ class CategoryContainer extends StatelessWidget {
               Text(
                 'Hair styling',
                 style: TextStyle(
-                  fontFamily: 'Regular',
+                  fontFamily: 'Light',
                   fontSize: 14,
                   color: Theme.of(context)
                       .textTheme
@@ -284,7 +285,7 @@ class CategoryContainer extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(6.0),
                   child: Container(
                     height: 60,
                     width: 60,
@@ -303,7 +304,7 @@ class CategoryContainer extends StatelessWidget {
               Text(
                 'Skin care',
                 style: TextStyle(
-                  fontFamily: 'Regular',
+                  fontFamily: 'Light',
                   fontSize: 14,
                   color: Theme.of(context)
                       .textTheme

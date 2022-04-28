@@ -2,6 +2,7 @@
 
 import 'package:admaya/constants.dart';
 import 'package:admaya/models/category.dart';
+import 'package:admaya/models/search_list.dart';
 import 'package:admaya/screens/all.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,12 @@ class _DiscoverScreenState extends State<DiscoverScreen>
         child: Column(
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                showSearch(
+                  context: context,
+                  delegate: ServiceSearch(),
+                );
+              },
               child: Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -41,7 +47,6 @@ class _DiscoverScreenState extends State<DiscoverScreen>
                   height: 50,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      color: Theme.of(context).cardTheme.color,
                       border: Border.all(
                         width: 1,
                         color: Theme.of(context).colorScheme.outline,
@@ -117,6 +122,77 @@ class _DiscoverScreenState extends State<DiscoverScreen>
           ],
         ),
       ),
+    );
+  }
+}
+
+class ServiceSearch extends SearchDelegate<String> {
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    return [
+      IconButton(
+        onPressed: () {},
+        icon: Icon(
+          Icons.clear,
+        ),
+      ),
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      icon: FaIcon(
+        FontAwesomeIcons.arrowLeft,
+        size: 20,
+      ),
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.work),
+          addVerticalSpace(48),
+          Text(
+            query,
+            style: TextStyle(
+              fontFamily: 'Bold',
+              fontSize: 64,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final porpularServices = serviceslist;
+    return buildPorpularServices(porpularServices);
+  }
+
+  Widget buildPorpularServices(List<String> porpularServices) {
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: Icon(Icons.work),
+          title: Text(
+            porpularServices[index],
+            style: TextStyle(
+              color: Theme.of(context).textTheme.bodyText1?.color,
+              fontFamily: 'Regular',
+            ),
+          ),
+        );
+      },
+      itemCount: porpularServices.length,
     );
   }
 }

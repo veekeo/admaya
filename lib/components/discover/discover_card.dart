@@ -4,7 +4,6 @@ import 'package:admaya/constants.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DiscoverCard extends StatelessWidget {
   final String coverImage;
@@ -27,7 +26,7 @@ class DiscoverCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        addVerticalSpace(20),
+        addVerticalSpace(5),
         Padding(
           padding: const EdgeInsets.only(bottom: 20),
           child: Container(
@@ -84,19 +83,9 @@ class DiscoverCard extends StatelessWidget {
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          addVerticalSpace(4),
-                          Text(
-                            address,
-                            style: TextStyle(
-                              decoration: TextDecoration.none,
-                              color: Colors.grey,
-                              fontFamily: 'Regular',
-                              fontSize: 12,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
                           addVerticalSpace(5),
                           RatingBar.builder(
+                            unratedColor: Theme.of(context).cardTheme.color,
                             initialRating: 3,
                             itemSize: 12,
                             minRating: 1,
@@ -104,13 +93,25 @@ class DiscoverCard extends StatelessWidget {
                             allowHalfRating: true,
                             itemCount: 5,
                             itemPadding: EdgeInsets.symmetric(horizontal: 3.0),
-                            itemBuilder: (context, _) => FaIcon(
-                              FontAwesomeIcons.solidHeart,
+                            itemBuilder: (context, _) => Icon(
+                              Icons.circle,
                               color: kPrimaryColor,
                             ),
                             onRatingUpdate: (rating) {
                               print(rating);
                             },
+                          ),
+                          addVerticalSpace(4),
+                          Text(
+                            address,
+                            style: TextStyle(
+                              decoration: TextDecoration.none,
+                              color:
+                                  Theme.of(context).textTheme.bodyText1?.color,
+                              fontFamily: 'Regular',
+                              fontSize: 12,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),

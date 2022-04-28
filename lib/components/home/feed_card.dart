@@ -4,7 +4,6 @@ import 'package:admaya/constants.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FeedCard extends StatelessWidget {
   final String coverImage;
@@ -56,31 +55,32 @@ class FeedCard extends StatelessWidget {
                 ),
               ),
               addVerticalSpace(5),
-              Text(
-                address,
-                style: TextStyle(
-                  decoration: TextDecoration.none,
-                  color: Colors.grey,
-                  fontFamily: 'Regular',
-                  fontSize: 13,
-                ),
-              ),
-              addVerticalSpace(10),
               RatingBar.builder(
+                unratedColor: Theme.of(context).cardTheme.color,
                 initialRating: 3,
                 itemSize: 13,
                 minRating: 1,
                 direction: Axis.horizontal,
                 allowHalfRating: true,
                 itemCount: 5,
-                itemPadding: EdgeInsets.symmetric(horizontal: 3.0),
-                itemBuilder: (context, _) => FaIcon(
-                  FontAwesomeIcons.solidHeart,
+                itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
+                itemBuilder: (context, _) => Icon(
+                  Icons.circle,
                   color: kPrimaryColor,
                 ),
                 onRatingUpdate: (rating) {
                   print(rating);
                 },
+              ),
+              addVerticalSpace(5),
+              Text(
+                address,
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  color: Theme.of(context).textTheme.bodyText1?.color,
+                  fontFamily: 'Light',
+                  fontSize: 13,
+                ),
               ),
             ],
           ),

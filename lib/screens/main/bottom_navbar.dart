@@ -2,7 +2,6 @@
 
 import 'package:admaya/screens/main/appointment_screen.dart';
 import 'package:admaya/screens/main/chat_screen.dart';
-import 'package:admaya/screens/main/discover_screen.dart';
 import 'package:admaya/screens/main/home_screen.dart';
 import 'package:admaya/screens/main/profile_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,7 +19,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final List<Widget> _pageList = [
     HomeScreen(),
-    DiscoverScreen(),
     ChatScreen(),
     AppointmentScreen(),
     ProfileScreen(),
@@ -49,10 +47,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.solidHeart),
             label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.magnifyingGlass),
-            label: 'Discover',
           ),
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.solidMessage),
