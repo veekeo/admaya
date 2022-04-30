@@ -8,16 +8,12 @@ import 'package:flutter/material.dart';
 class FeedCard extends StatelessWidget {
   final String coverImage;
   final String name;
-  final String price;
-  final String time;
   final String reviews;
   final String address;
 
   FeedCard({
     required this.coverImage,
     required this.name,
-    required this.price,
-    required this.time,
     required this.reviews,
     required this.address,
   });
@@ -52,6 +48,16 @@ class FeedCard extends StatelessWidget {
                   color: Theme.of(context).textTheme.bodyText1?.color,
                   fontFamily: 'Bold',
                   fontSize: 18,
+                ),
+              ),
+              addVerticalSpace(5),
+              Text(
+                reviews,
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  color: Theme.of(context).textTheme.bodyText1?.color,
+                  fontFamily: 'Light',
+                  fontSize: 13,
                 ),
               ),
               addVerticalSpace(5),

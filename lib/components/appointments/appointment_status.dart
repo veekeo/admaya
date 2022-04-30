@@ -14,7 +14,7 @@ class AppointmentStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
+      height: 20,
       width: 90,
       decoration: BoxDecoration(
         color: color,

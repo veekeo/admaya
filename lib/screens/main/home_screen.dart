@@ -79,14 +79,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     coverImage: feedCardLists[index].coverImage,
                     name: feedCardLists[index].name,
                     address: feedCardLists[index].address,
-                    price: feedCardLists[index].price,
-                    time: feedCardLists[index].time,
                     reviews: feedCardLists[index].reviews,
                   );
                 },
                 itemCount: feedCardLists.length,
               ),
             ),
+            addVerticalSpace(20),
             Divider(height: 1),
             addVerticalSpace(20),
             Padding(

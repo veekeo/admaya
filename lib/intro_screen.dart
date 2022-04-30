@@ -55,25 +55,13 @@ class IntroScreen extends StatelessWidget {
                 DelayedDisplay(
                   delay: Duration(milliseconds: 600),
                   child: Text(
-                    'near you, book appointments, or',
+                    'near you, book appointments and chat',
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'Light',
                       fontSize: 17,
                     ),
                     textAlign: TextAlign.center,
-                  ),
-                ),
-                addVerticalSpace(5),
-                DelayedDisplay(
-                  delay: Duration(milliseconds: 700),
-                  child: Text(
-                    'Work Jobs',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily: 'Bold',
-                      fontSize: 35,
-                    ),
                   ),
                 ),
                 addVerticalSpace(30),

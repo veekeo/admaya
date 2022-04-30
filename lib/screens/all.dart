@@ -46,8 +46,6 @@ class _AllServicesState extends State<AllServices> {
                 coverImage: feedCardLists[index].coverImage,
                 name: feedCardLists[index].name,
                 address: feedCardLists[index].address,
-                price: feedCardLists[index].price,
-                time: feedCardLists[index].time,
                 reviews: feedCardLists[index].reviews,
               );
             },

@@ -53,8 +53,8 @@ class DiscoverCard extends StatelessWidget {
                     height: 250 / 1.5,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(0),
-                        bottomRight: Radius.circular(0),
+                        bottomLeft: Radius.circular(16),
+                        bottomRight: Radius.circular(16),
                         topRight: Radius.circular(16),
                         topLeft: Radius.circular(16),
                       ),

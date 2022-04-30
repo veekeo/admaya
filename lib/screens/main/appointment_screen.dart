@@ -26,7 +26,7 @@ class AppointmentScreen extends StatelessWidget {
                     'Upcoming Apointments',
                     style: TextStyle(
                       fontFamily: 'Bold',
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Theme.of(context).textTheme.bodyText1?.color,
                     ),
                   ),
@@ -67,7 +67,7 @@ class AppointmentScreen extends StatelessWidget {
                     'Cancelled Apointments',
                     style: TextStyle(
                       fontFamily: 'Bold',
-                      fontSize: 24,
+                      fontSize: 20,
                       color: Theme.of(context).textTheme.bodyText1?.color,
                     ),
                   ),
