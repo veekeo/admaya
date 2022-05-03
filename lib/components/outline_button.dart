@@ -22,7 +22,7 @@ class OulineButtonContainer extends StatelessWidget {
               width: 1,
               color: Theme.of(context).colorScheme.outline,
             ),
-            borderRadius: BorderRadius.all(Radius.circular(50))),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

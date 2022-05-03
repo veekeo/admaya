@@ -31,7 +31,7 @@ class MainButton extends StatelessWidget {
         primary: color,
         fixedSize: const Size(300, 50),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
     );

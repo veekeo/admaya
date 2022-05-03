@@ -70,7 +70,7 @@ class CancelledAppointments extends StatelessWidget {
                       color: Theme.of(context).textTheme.bodyText1?.color,
                     ),
                   ),
-                  addVerticalSpace(5),
+                  addVerticalSpace(20),
                   ElevatedButton(
                     onPressed: () {},
                     child: Text(
@@ -86,7 +86,7 @@ class CancelledAppointments extends StatelessWidget {
                       primary: kPrimaryColor,
                       fixedSize: const Size(180, 30),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   )

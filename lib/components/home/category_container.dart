@@ -1,7 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:admaya/constants.dart';
-import 'package:admaya/screens/main/discover_screen.dart';
+import 'package:admaya/screens/main/service_search.dart';
 import 'package:admaya/utils/helper.dart';
 import 'package:flutter/material.dart';
 
@@ -76,11 +76,7 @@ class CategoryContainer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Light',
                   fontSize: 14,
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      ?.color!
-                      .withOpacity(0.5),
+                  color: Theme.of(context).textTheme.bodyText1?.color,
                 ),
               ),
             ],
@@ -122,11 +118,7 @@ class CategoryContainer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Light',
                   fontSize: 14,
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      ?.color!
-                      .withOpacity(0.5),
+                  color: Theme.of(context).textTheme.bodyText1?.color,
                 ),
               ),
             ],
@@ -168,11 +160,7 @@ class CategoryContainer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Light',
                   fontSize: 14,
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      ?.color!
-                      .withOpacity(0.5),
+                  color: Theme.of(context).textTheme.bodyText1?.color,
                 ),
               ),
             ],
@@ -214,11 +202,7 @@ class CategoryContainer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Light',
                   fontSize: 14,
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      ?.color!
-                      .withOpacity(0.5),
+                  color: Theme.of(context).textTheme.bodyText1?.color,
                 ),
               ),
             ],
@@ -260,11 +244,7 @@ class CategoryContainer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Light',
                   fontSize: 14,
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      ?.color!
-                      .withOpacity(0.5),
+                  color: Theme.of(context).textTheme.bodyText1?.color,
                 ),
               ),
             ],
@@ -306,11 +286,7 @@ class CategoryContainer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Light',
                   fontSize: 14,
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      ?.color!
-                      .withOpacity(0.5),
+                  color: Theme.of(context).textTheme.bodyText1?.color,
                 ),
               ),
             ],
