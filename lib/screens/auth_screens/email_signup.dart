@@ -1,3 +1,4 @@
+// @dart=2.9
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, missing_return, avoid_print, unnecessary_null_comparison
 
 import 'package:admaya/components/main_button.dart';
@@ -27,7 +28,7 @@ class _EmailSignUpScreenState extends State<EmailSignUpScreen> {
     });
   }
 
-  validateEmail(String? value) {
+  validateEmail(String value) {
     String pattern =
         r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
         r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"

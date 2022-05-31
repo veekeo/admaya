@@ -1,3 +1,5 @@
+// @dart=2.9
+
 class FeedData {
   final String coverImage;
   final String name;
@@ -5,21 +7,21 @@ class FeedData {
   final String time;
   final String reviews;
   final String address;
-  final List<String> category;
-  final List<String> serviceTitle;
-  final List<String> serviceItem;
-  final String serviceItemDetails;
+  final String email;
+  final String phoneNumber;
+  final Map<String, String> services;
+  final List<String> portfolio;
 
   FeedData({
-    required this.coverImage,
-    required this.name,
-    required this.price,
-    required this.time,
-    required this.reviews,
-    required this.address,
-    required this.category,
-    required this.serviceTitle,
-    required this.serviceItemDetails,
-    required this.serviceItem,
+    this.coverImage,
+    this.name,
+    this.price,
+    this.time,
+    this.reviews,
+    this.address,
+    this.email,
+    this.phoneNumber,
+    this.services,
+    this.portfolio,
   });
 }

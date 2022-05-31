@@ -1,3 +1,4 @@
+// @dart=2.9
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, use_key_in_widget_constructors, non_constant_identifier_names
 
 import 'package:admaya/components/discover/discover_card.dart';
@@ -89,6 +90,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           headerImage: nearbyLists[index].coverImage,
                           name: nearbyLists[index].name,
                           address: nearbyLists[index].address,
+                          services: nearbyLists[index].services,
+                          portfolio: nearbyLists[index].portfolio,
+                          email: nearbyLists[index].email,
+                          phoneNumber: nearbyLists[index].phoneNumber,
                         );
                       }));
                     },

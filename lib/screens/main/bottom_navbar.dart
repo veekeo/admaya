@@ -1,4 +1,5 @@
-// ignore_for_file: prefer_const_constructors, unused_field, prefer_const_literals_to_create_immutables
+// @dart=2.9
+// ignore_for_file: prefer_const_constructors, unused_field, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:admaya/screens/main/appointment_screen.dart';
 import 'package:admaya/screens/main/chat_screen.dart';
@@ -8,8 +9,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({Key? key}) : super(key: key);
-
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
@@ -29,7 +28,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: _pageList[pageIndex],
       bottomNavigationBar: BottomNavigationBar(
-        iconSize: 20,
+        iconSize: 18,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         selectedIconTheme: IconThemeData(

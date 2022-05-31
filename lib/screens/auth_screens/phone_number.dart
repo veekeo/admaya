@@ -1,3 +1,4 @@
+// @dart=2.9
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:admaya/components/main_button.dart';

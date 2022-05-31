@@ -30,9 +30,6 @@ class MainButton extends StatelessWidget {
         elevation: 1,
         primary: color,
         fixedSize: const Size(300, 50),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
       ),
     );
   }

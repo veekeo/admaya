@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 class MyTheme {
   static final darkTheme = ThemeData(
+    primaryColor: Colors.white,
     scaffoldBackgroundColor: Color.fromARGB(255, 16, 16, 16),
     brightness: Brightness.dark,
     colorScheme: ColorScheme.dark(
@@ -26,6 +27,7 @@ class MyTheme {
   );
 
   static final lightTheme = ThemeData(
+    primaryColor: Colors.black,
     scaffoldBackgroundColor: Colors.white,
     brightness: Brightness.light,
     cardTheme: CardTheme(

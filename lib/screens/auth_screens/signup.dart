@@ -1,3 +1,4 @@
+// @dart=2.9
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, unrelated_type_equality_checks
 
 import 'package:admaya/components/outline_button.dart';
@@ -10,7 +11,7 @@ import 'package:delayed_display/delayed_display.dart';
 
 class SignUpScreen extends StatelessWidget {
   final Duration initialDelay = Duration(milliseconds: 300);
-  late final ThemeData isDark = MyTheme.darkTheme;
+  final ThemeData isDark = MyTheme.darkTheme;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
