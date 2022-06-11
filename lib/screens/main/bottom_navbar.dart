@@ -5,7 +5,7 @@ import 'package:admaya/screens/main/appointment_screen.dart';
 import 'package:admaya/screens/main/chat_screen.dart';
 import 'package:admaya/screens/main/home_screen.dart';
 import 'package:admaya/screens/main/profile_screen.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -44,19 +44,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.solidHeart),
+            icon: Icon(LineIcons.heart),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.solidMessage),
+            icon: Icon(LineIcons.rocketChat),
             label: 'Chats',
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.calendar),
+            icon: Icon(LineIcons.calendar),
             label: "Appointments",
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.user),
+            icon: Icon(LineIcons.user),
             label: 'Profile',
           ),
         ],

@@ -25,6 +25,7 @@ dependencies:
   universal_platform: ^1.0.0+1
   delayed_display: ^2.0.0
   font_awesome_flutter: ^10.1.0
+  line_icons: ^2.0.1
   flutter_svg: ^1.0.3
   flutter_rating_bar: ^4.0.0
   flutter_switch: ^0.3.2
@@ -61,17 +62,17 @@ flutter:
   fonts:
     - family: Bold
       fonts:
-        - asset: assets/fonts/Ubuntu-Bold.ttf
+        - asset: assets/fonts/Kanit-Bold.ttf
 
     - family: Medium
       fonts:
-        - asset: assets/fonts/Ubuntu-Medium.ttf
+        - asset: assets/fonts/Kanit-Medium.ttf
 
     - family: Regular
       fonts:
-        - asset: assets/fonts/Ubuntu-Regular.ttf
+        - asset: assets/fonts/Kanit-Regular.ttf
 
     - family: Light
       fonts:
-        - asset: assets/fonts/Ubuntu-Light.ttf
+        - asset: assets/fonts/Kanit-Light.ttf
 
